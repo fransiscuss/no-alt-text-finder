@@ -1,0 +1,52 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Editor Files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.komodotools/
+*.swp
+*.swo
+
+# Dependency Directories
+node_modules/
+vendor/
+bower_components/
+
+# Build/Deployment Directories
+dist/
+build/
+release/
+
+# WordPress Plugin Development
+.wordpress-org/
+wp-content/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# Generated Files
+*.min.js
+*.min.css
+assets/css/*.min.css
+assets/js/*.min.js

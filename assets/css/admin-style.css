@@ -1,0 +1,31 @@
+/* No Alt Text Finder Admin Styles */
+.natf-progress {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.natf-progress-bar {
+    height: 20px;
+    background-color: #0073aa;
+    width: 0%;
+    border-radius: 3px;
+    transition: width 0.3s;
+}
+.natf-export-options {
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.natf-results {
+    margin-top: 20px;
+    display: none;
+}
+.natf-error {
+    color: #d63638;
+    font-weight: bold;
+}
