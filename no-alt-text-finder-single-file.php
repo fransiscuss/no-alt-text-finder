@@ -3,7 +3,7 @@
  * Plugin Name: No Alt Text Finder
  * Plugin URI: https://github.com/fransiscuss/no-alt-text-finder#
  * Description: Finds all images without alt text in WordPress and WooCommerce and exports them to a CSV file.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Fransiscus Setiawan
  * Author URI: https://fransiscuss.com
  * Text Domain: no-alt-text-finder
@@ -361,15 +361,19 @@ jQuery(document).ready(function($) {
             
             // Return success
             if (count($results) > 0) {
+                $nonce = wp_create_nonce('natf_download_nonce');
+                $download_url = plugin_dir_url(__FILE__) . 'download-csv.php?file=' . $filename . '&nonce=' . $nonce;
+                
                 wp_send_json_success(array(
                     'message' => sprintf(
                         __('Found %d images without alt text. <a href="%s" target="_blank">Download CSV</a>', 'no-alt-text-finder'),
                         count($results),
-                        esc_url($csv_url)
+                        esc_url($download_url)
                     ),
                     'count' => count($results),
-                    'download_url' => $csv_url
+                    'download_url' => $download_url
                 ));
+                
             } else {
                 wp_send_json_success(array(
                     'message' => __('Great news! No images without alt text were found.', 'no-alt-text-finder'),
